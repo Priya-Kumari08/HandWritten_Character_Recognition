@@ -35,3 +35,11 @@ model.fit(x_train,y_train,epochs=5)
 model.save("model.h5")
 
 print("Model Trained & Saved!")
+# ... model training code ...
+
+# Model evaluation
+test_loss, test_accuracy = model.evaluate(x_test, y_test)
+print(f"Test Accuracy: {test_accuracy*100:.2f}%")
+
+# Save model
+model.save('handwritten_model.h5')
